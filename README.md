@@ -11,16 +11,23 @@ Contact Email: tanghui2020@scut.edu.cn; zeng_tao@gzlab.ac.cn or zengtao@sibs.ac.
 
 
 ##################### V0.1 ######################################
+
 Vec3D: Vec3D for MATLAB is free, open-source code for Structured Molecular Landscape (SML) construction, feature selection and prediction.
 
 (1) Input files include multimodal feature matrix and labels.
+
 (2) Main.m is the main program to execute Vec3D algorithm. The program can be run step by step for each analysis phase.
+
 (3) Output file with *.mat contains the well-trained model, the predicted accuracy of the test data, the SML of defined cell types and the informative molecules (features).
+
 (4) Aoria.mat is provided to verify the code.
 
 Note : 
+
 (1) The trainNetwork() function in Matlab is used when training a CNN model, and the Matlab version should comply with: > MTALAB2016a.
+
 (2) Vec3D can be trained on either CPU or GPU. For image classification, a single network can be trained in parallel using multiple GPUs or a local or remote parallel pool to save training time. 
+
 (3) MaxEpochs is set to 400 in function parameters.m, which can be adjusted for different datasets taking into account the processing time of training.
 
 
