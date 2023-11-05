@@ -31,5 +31,7 @@ Note :
 (3) MaxEpochs is set to 400 in function parameters.m, which can be adjusted for different datasets taking into account the processing time of training.
 
 ##################### V0.2 ######################################
+
 An improved version of Vec3D, providing a complete definition and quantification of SML and additional evaluations on single-cell multi-omics data analysis.
+
 The whole datasets are in Data directory. Noted that, the Atlas and CITE datasets can be required from authors due to their large size exceeded the file size requirement of github.
