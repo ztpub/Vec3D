@@ -35,3 +35,27 @@ Note :
 An improved version of Vec3D, providing a complete definition and quantification of SML and additional evaluations on single-cell multi-omics data analysis.
 
 The whole datasets are in Data directory. Noted that, the Atlas and CITE datasets can be required from authors due to their large size exceeded the file size requirement of github.
+
+##################### V0.3 ######################################
+
+Another improved version of Vec3D, especially includes a branch of python version.
+
+Updated code usage guidance for this release:
+
+(1) Multimodal datasets are required: the input data dset is processed as struct，including dset.Xtrain, dset.train_labels, dset.Xtest, dset.test_labels and dset.class.
+
+(2) Main.m is the main program for executing the Vec3D algorithm. You can run the program step by step. Additionally, the sample folder provides a demo of the six datasets used for benchmarking.
+
+(3) The output files include Result.mat (the well-trained model net)，out.mat (the pseudo images), SML.mat (the SML for each class), IFMs.mat (the informative molecules), and the prediction accuracy of the test data.
+
+(4) Multiple datasets (dataset1, MUSE, Dyngen, DLPFC, altas) are provided to verify the Matlab code and results. The complete datasets can now also be downloaded at https://drive.google.com/drive/folders/17PwKM3JAMsG4i1rOma_CIuyHTNrc4T7d
+
+(5) The python implementation for Vec3D is based on PyCharm. The Dyngen dataset is provided to verify the python code. We call the MATLAB code Vec3D from Python. The MATLAB Engine API for Python provides a package for Python to use MATLAB as a computation engine. The engine supports a reference implementation (CPython). For supported version information, see MATLAB product (by version) compatible Python versions. https://ww2.mathworks.cn/help/matlab/matlab-engine-for-python.html
+
+Note:
+
+(1) The trainNetwork() function in Matlab is used to train a CNN model. Please note your Matlab version (>= MTALAB2020a).
+
+(2) You can train on either a CPU or a GPU (i.e. setting in line 131 of makeObjFcn5.m). For image classification, you can train a single network in parallel using multiple GPUs or a local or remote parallel pool to save training time. To use a GPU for deep learning, you must also have a supported GPU device.
+
+(3) The MaxEpochs is set to 500 in Parameter.m. Please change this as desired. This will affect the completion time of the training.
